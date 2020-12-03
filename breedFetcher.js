@@ -1,8 +1,8 @@
 const request = require('request');
 
-const breed = process.argv.slice(2)[0];
 
 const fetchBreedDescription = function(breed, callback) {
+  callback();
   request(('https://api.thecatapi.com/v1/images/search?breed_ids=' + breed.substring(0, 4)), (error, response, body) => {
     if (error) {
       throw new Error(error);
